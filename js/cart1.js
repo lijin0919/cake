@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //《-----------------购物车-----------------》
 var count = 0;
 $("#detail-cart-btn").click(function () {
     // alert("加入购物车");
@@ -7,4 +8,7 @@ $("#detail-cart-btn").click(function () {
     $("#detail-cart-num").text(count);
 });
 
-});
+});//ready
+
+
+
