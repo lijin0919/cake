@@ -1,3 +1,11 @@
+//点击注册提交后的触发事件
+
+$.validator.setDefaults({
+    submitHandler: function() {
+        alert("提交事件!");
+    }
+});
+
 // 就绪函数
 $().ready(function(){
     //让当前表单调用validate方法，实现表单验证功能
@@ -35,20 +43,3 @@ $().ready(function(){
         }
     })
 });
-
-// {
-//     onfocusout:true,
-//         rules:{
-//     username:"required",
-//         username:{
-//         required:true,
-//             minlength:
-//     }
-// },
-//     message:{
-//         username:{
-//             required:"请输入正确的用户名",
-//                 minlength:"用户名不能小于8个"
-//         }
-//     }
-// });
