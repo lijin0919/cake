@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$().ready(function () {
     //《-----------------购物车-----------------》
     //count为购物车总数量
 var count = 1;
@@ -13,12 +13,33 @@ var item_count3=1;
 //totalPrice为购物车内商品总价
 var totalPrice;
 $(".item_add").click(function () {
-
-    alert("加入购物车成功");
-
-    //将此值放入session作用域中
     $(".card_num").text(count++);
+    var json = {
+        // title:"标题",
+        msg:"添加购物车成功！",
+        buttons:[
+            { title:"继续购物",color:"blue",click:function(){
+                //跳回当前页
+                $(location).attr('href','#');
+                alert("你点了继续购物")
+            } },
+            { title:"立即结算",color:"red",click:function(){
+                $(location).attr('href','cart.html');
+                alert("你点了立即结算")
+            } }
+        ]
+    };
+    $.alertView(json);
+
 });
+
+
+    // $().ready(function () {
+    //     $("#testBtn").click(function () {
+    //         $.alertView("你好")
+    //     })
+    // });
+
 
 
     /*购物车内每次点击某个商品的增加按钮，商品数量数量增加1个,并且重新计算总价*/
