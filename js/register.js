@@ -1,7 +1,7 @@
 //点击注册提交后的触发事件
 
 $.validator.setDefaults({
-    submitHandler: function() {
+    submitHandler: function(form) {
         alert("提交事件!");
     }
 });
@@ -12,6 +12,7 @@ $.validator.setDefaults({
     $().ready(function(){
         //让当前表单调用validate方法，实现表单验证功能
     $("#commentForm").validate({
+        // debug:true,
         focusCleanup:true,
         onfocusout: function(element) { $(element).valid(); },
         rules: {     //配置验证规则，key就是被验证的dom对象，value就是调用验证的方法(也是json格式)
