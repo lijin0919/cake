@@ -64,7 +64,7 @@ $.validator.setDefaults({
         var checkPwd = /^\w{6,16}$/g;
         return this.optional(element)||(checkPwd.test(value));
     });
-    //《-----------------自定义电话验证-------------------》
+    // 《-----------------自定义电话验证-------------------》
     $.validator.addMethod("isphoneNum", function(value, element,params) {
         // debugger;
         // var length = value.length;
