@@ -17,6 +17,7 @@
     <!--//引入迷你购车jqery和css-->
     <script src="js/minicart_addItems.js"></script>
     <link rel="stylesheet" href="css/minicart.css">
+    <script src="js/common.js"></script>
 
 </head>
 <body>
@@ -43,62 +44,58 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1 class="navbar-brand"><a href="index.html">甜品店</a></h1>
+                <h1 class="navbar-brand"><a href="#">甜品店</a></h1>
             </div>
             <!--navbar-header-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html" >首页</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle " data-toggle="dropdown">商品分类<b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-column columns-2">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li class="dropdown navbar_type">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">商品分类<b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-column columns-2 type_list" style="display: none">
                             <li>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <h4>商品分类</h4>
                                         <ul class="multi-column-dropdown">
-
                                             <li><a class="list" href="goods.html">经典系列</a></li>
-
                                             <li><a class="list" href="goods.html">法式系列</a></li>
-
                                             <li><a class="list" href="goods.html">儿童系列</a></li>
-
                                             <li><a class="list" href="goods.html">零食系列</a></li>
-
                                             <li><a class="list" href="goods.html">冰淇淋系列</a></li>
-
                                         </ul>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="goods.html" >热销</a></li>
-                    <li><a href="goods.html" >新品</a></li>
-
-
-                    <li><a href="goods.html" >我的订单</a></li>
-                    <li><a href="goods.html" >个人中心</a></li>
-                    <li><a href="goods.html">退出</a></li>
-
-                    <li><a href="../admin.jsp" target="_blank">后台管理</a></li>
+                    <li><a href="goods.html" class="">热销</a></li>
+                    <li><a href="goods.html" class="">新品</a></li>
+                    <li><a href="register.html" class="">注册</a></li>
+                    <li><a href="login.html" class="">登录</a></li>
+                    <!--<li><a href="order.action" class="active">我的订单</a></li>-->
+                    <!--<li><a href="my.action" class="active">个人中心</a></li>-->
+                    <!--<li><a href="logout.action">退出</a></li>-->
+                    <li><a href="admin/adminLogin.html" target="_blank">后台管理</a></li>
                 </ul>
                 <!--/.navbar-collapse-->
             </div>
             <!--//navbar-header-->
         </nav>
-        <div class="header-info">
+        <div  class="header-info">
             <div class="header-right search-box">
-                <a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                <a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                 <div class="search">
-                    <form class="navbar-form" action="search.action">
+                    <form class="navbar-form" action="">
                         <input type="text" class="form-control" name="name">
                         <button type="submit" class="btn btn-default" aria-label="Left Align">搜索</button>
                     </form>
                 </div>
             </div>
-
+            <!--<%&#45;&#45; <div class="header-right login">-->
+            <!--<a href="my.action"><span class="glyphicon glyphicon-user" aria-hidden="true">${user.username}</span></a>-->
+            <!--</div> &#45;&#45;%> -->
+            <!--购物车-->
             <div id="cart-img" class="header-right cart">
                 <a href="cart.html">
                     <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"><span class="card_num" >4</span></span>
@@ -237,9 +234,7 @@
                     </div>
                     <div class="mcart-pay clearfix">
                         <div class="pull-left" style="margin-left:10px; ">
-                            共
-                            <span class="glyphicon-shopping-cart" id="items_num">4</span>
-                            件商品
+                            共<span class="glyphicon-shopping-cart" id="items_num">4</span>件商品
                         </div>
                         <div class="pull-right">
                             商品小计
@@ -253,7 +248,7 @@
                 </div>
             </div>
             <div class="header-right login">
-                <a href="my.action"><span class="glyphicon" aria-hidden="true">madi</span></a>
+                <!--<a href="my.action"><span class="glyphicon" aria-hidden="true">${user.username}</span></a>-->
             </div>
             <div class="clearfix"> </div>
         </div>
