@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>订单列表</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script type="text/javascript" src="js/orderLIst.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">蛋糕店后台</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="orderList.action">订单管理</a></li>
+                    <li ><a href="userList.action">客户管理</a></li>
+                    <li ><a href="goodList.action">商品管理</a></li>
+                    <li ><a href="typeList.action">类目管理</a></li>
+                    <li ><a href="adminRe.action">修改密码</a></li>
+                    <li><a href="logout.action">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    </body>
+    </html>
+
+    <br>
+
+    <ul role="tablist" class="nav nav-tabs">
+        <li class="active" role="presentation"><a href="orderList.action">全部订单</a></li>
+        <li  role="presentation"><a href="orderList.action?status=1">未付款</a></li>
+        <li  role="presentation"><a href="orderList.action?status=2">已付款</a></li>
+        <li  role="presentation"><a href="orderList.action?status=3">配送中</a></li>
+        <li  role="presentation"><a href="orderList.action?status=4">已完成</a></li>
+    </ul>
+
+    <br>
+
+    <table class="table table-bordered table-hover">
+
+        <tr>
+            <th width="5%">ID</th>
+            <th width="5%">总价</th>
+            <th width="15%">商品详情</th>
+            <th width="20%">收货信息</th>
+            <th width="10%">订单状态</th>
+            <th width="10%">支付方式</th>
+            <th width="10%">下单用户</th>
+            <th width="10%">下单时间</th>
+            <th width="10%">操作</th>
+        </tr>
+
+
+        <tr id="item_id_3">
+            <td><p>3</p></td>
+            <td><p>269</p></td>
+            <td>
+
+                <p>芒果列车(269) x 1</p>
+
+            </td>
+            <td>
+                <p></p>
+                <p></p>
+                <p></p>
+            </td>
+            <td>
+                <p>
+                    未付款
+
+
+
+                </p>
+            </td>
+            <td>
+                <p>
+
+
+
+                </p>
+            </td>
+            <td><p>madi</p></td>
+            <td><p>2018-01-17 08:55:11</p></td>
+            <td>
+
+
+                <button class="btn btn-danger" id="delete_3">删除</button>
+                <!--<a class="btn btn-danger3" href="orderDelete.action?id=3&status=0">删除</a>-->
+            </td>
+        </tr>
+
+        <tr id="item_id_2">
+            <td><p>2</p></td>
+            <td><p>299</p></td>
+            <td>
+
+                <p>夜礼服(299) x 1</p>
+
+            </td>
+            <td>
+                <p>madi</p>
+                <p>1333333333</p>
+                <p>ijijijijijj</p>
+            </td>
+            <td>
+                <p>
+
+                    <span style="color:red;">已付款</span>
+
+
+                </p>
+            </td>
+            <td>
+                <p>
+                    微信
+
+
+                </p>
+            </td>
+            <td><p>madi</p></td>
+            <td><p>2018-01-16 17:50:26</p></td>
+            <td>
+
+                <button class="btn btn-success"  id="success_2">发货</button>
+                <!--<a class="btn btn-success2" href="orderDispose.action?id=2&status=0">发货</a>-->
+
+
+                <button class="btn btn-danger"  id="delete_2">删除</button>
+                <!--<a class="btn btn-danger2" href="orderDelete.action?id=2&status=0">删除</a>-->
+            </td>
+        </tr>
+
+        <tr id="item_id_1">
+            <td><p>1</p></td>
+            <td><p>598</p></td>
+            <td>
+
+                <p>夜礼服(299) x 1</p>
+
+                <p>草莓冰淇淋(299) x 1</p>
+
+            </td>
+            <td>
+                <p>sdasdadasd</p>
+                <p>23132132312312321</p>
+                <p>dawdasdsadasda</p>
+            </td>
+            <td>
+                <p>
+
+
+
+                    已完成
+                </p>
+            </td>
+            <td>
+                <p>
+                    微信
+
+
+                </p>
+            </td>
+            <td><p>aaaaaa</p></td>
+            <td><p>2018-01-16 08:36:15</p></td>
+            <td>
+
+
+                <button class="btn btn-danger" id="delete_1">删除</button>
+                <!--<a class="btn btn-danger1" href="orderDelete.action?id=1&status=0">删除</a>-->
+            </td>
+        </tr>
+
+
+    </table>
+
+    <br><div style='text-align:center;'>
+    <a class='btn btn-info' disabled >首页</a>
+    <a class='btn btn-info' disabled >上一页</a>
+    <h2 style='display:inline;'>[1/1]</h2>
+    <h2 style='display:inline;'>[3]</h2>
+    <a class='btn btn-info' disabled >下一页</a>
+    <a class='btn btn-info' disabled >尾页</a>
+    <input type='text' class='form-control' style='display:inline;width:60px;' value=''/><a class='btn btn-info' href='javascript:void(0);' onclick='location.href="http://localhost:8080/ssh_cake/admin/orderList.action?page="+(this.previousSibling.value)+""'>GO</a>
+</div>
+    <br>
+</div>
+</body>
+</html>
