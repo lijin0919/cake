@@ -21,11 +21,11 @@ $(".item_add").click(function () {
             { title:"继续购物",color:"blue",click:function(){
                 //跳回当前页
                 $(location).attr('href','#');
-                alert("你点了继续购物")
+                // alert("你点了继续购物")
             } },
             { title:"立即结算",color:"red",click:function(){
                 $(location).attr('href','cart.html');
-                alert("你点了立即结算")
+                // alert("你点了立即结算")
             } }
         ]
     };

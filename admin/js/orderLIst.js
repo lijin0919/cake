@@ -8,4 +8,5 @@ $().ready(function () {
     $("#success_2").click(function () {
         $("#success_2").text()
     });
+
 });

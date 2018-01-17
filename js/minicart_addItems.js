@@ -190,7 +190,9 @@ var totalPrice=0;
     $("#cart-img").mouseout(function () {
         $("#minicart-show").css("display","none");
     });
-
+    $("#btncart").click(function () {
+        $(location).attr("href","topay.html")
+    });
     // //当点击迷你迷你购物车的商品数量的"+"时，增加商品数量1个
     // $(".add").click(function() {
     //     // $(this).prev() 就是当前元素的前一个元素，即 text_box
